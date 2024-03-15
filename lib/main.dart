@@ -3,12 +3,12 @@ import 'package:vitto/theme/dark_mode.dart';
 import 'pages/login_page.dart';
 import 'package:vitto/theme/light_mode.dart';
 
-void main(){
-  runApp(const vittoApp());
+void main() {
+  runApp(const App());
 }
 
-class vittoApp extends StatelessWidget{
-  const vittoApp({super.key});
+class App extends StatelessWidget {
+  const App({Key? key});
 
   @override
   Widget build(BuildContext context) {

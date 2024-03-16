@@ -4,11 +4,11 @@ import 'pages/login_page.dart';
 import 'package:vitto/theme/light_mode.dart';
 
 void main() {
-  runApp(const App());
+  runApp(const VittoApp());
 }
 
-class App extends StatelessWidget {
-  const App({Key? key});
+class VittoApp extends StatelessWidget {
+  const VittoApp({Key? key});
 
   @override
   Widget build(BuildContext context) {

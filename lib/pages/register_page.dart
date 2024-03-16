@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:vitto/components/login_textfield.dart';
 import 'package:vitto/components/login_button.dart'; // Assuming you have a LoginButton widget
 
-class LoginPage extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+class RegisterPage extends StatelessWidget {
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController displaynameController = TextEditingController();
+  final TextEditingController schoolnameController = TextEditingController();
 
-  LoginPage({Key? key}) : super(key: key);
+  RegisterPage({Key? key}) : super(key: key);
+
+  void register(){}
 
   @override
   Widget build(BuildContext context) {
@@ -36,37 +39,37 @@ class LoginPage extends StatelessWidget {
 
               // Login Text Field
               LoginTextField(
-                hintText: "Enter your email",
+                hintText: "username",
                 obscureText: false,
-                controller: emailController,
+                controller: usernameController,
               ),
 
               const SizedBox(height: 10),
 
               // Password Text Field
               LoginTextField(
-                hintText: "Enter your password",
+                hintText: "display name",
                 obscureText: true,
-                controller: passwordController,
+                controller: displaynameController,
               ),
 
-              const SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
-                  ),
-                ],
+                const SizedBox(height: 10),
+
+
+              LoginTextField(
+                hintText: "School",
+                obscureText: true,
+                controller: schoolnameController,
               ),
+
+                const SizedBox(height: 10),
+
+            
 
               const SizedBox(height: 20),
 
               LoginButton(
-                text: "Login",
+                text: "Create Account",
                 onTap: () {}, // Here you should provide a function for login functionality
               ),
 
@@ -78,7 +81,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account?",
+                    "Already have an account?",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.primary),
                   ),
@@ -87,7 +90,7 @@ class LoginPage extends StatelessWidget {
                       // Add navigation logic for registration page
                     },
                     child: Text(
-                      " Register Here",
+                      " Login here",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.primary,

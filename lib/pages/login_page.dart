@@ -51,6 +51,16 @@ class LoginPage extends StatelessWidget {
               obscureText: true, // Password is obscured
               controller: passwordController,
             ),
+
+
+
+            const SizedBox(height:30),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children:[
+            Text("Forgot Password?", style: TextStyle(color: Theme.of(context).colorScheme.secondary)),
+              ],
+             ),
           ],
         ),
         ),
